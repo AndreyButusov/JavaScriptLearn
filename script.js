@@ -18,17 +18,27 @@
 
 // Задание 3.
 
-const c = 10;
-const d = 2;
+// const c = 10;
+// const d = 2;
 
-let sum = c + d;
-let diff = c - d;
-let multiplication = c * d;
-let division = c / d;
+// let sum = c + d;
+// let diff = c - d;
+// let multiplication = c * d;
+// let division = c / d;
 
-console.log(`Сумма равна: ${sum}`);
-console.log(`Разность равна: ${diff}`);
-console.log(`Произведение равно: ${multiplication}`);
-console.log(`Частное равно: ${division}`);
+// console.log(`Сумма равна: ${sum}`);
+// console.log(`Разность равна: ${diff}`);
+// console.log(`Произведение равно: ${multiplication}`);
+// console.log(`Частное равно: ${division}`);
 
-console.log(sum + diff + multiplication + division);
+// console.log(sum + diff + multiplication + division);
+
+
+
+// Задание 5.
+
+let a = 1.5;
+let b = 0.75;
+
+console.log(a + b);
+console.log(-a);
