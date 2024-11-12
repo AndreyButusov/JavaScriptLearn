@@ -37,8 +37,24 @@
 
 // Задание 5.
 
-let a = 1.5;
-let b = 0.75;
+// let a = 1.5;
+// let b = 0.75;
 
-console.log(a + b);
-console.log(-a);
+// console.log(a + b);
+// console.log(-a);
+
+
+
+//Задание 6.
+
+let firstName = "Андрей";
+let lastName = "Бутусов";
+console.log(firstName + " " + lastName);
+
+let word1 = "java";
+let word2 = "script";
+console.log(word1 + word2);
+
+let word3 = "hello";
+let word4 = "world";
+console.log(word3 + " " + word4);
