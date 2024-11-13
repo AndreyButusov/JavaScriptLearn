@@ -10,7 +10,7 @@
 
 //Задача 2
 
-let name = 'Ivan';
-let admin = name;
+// let name = 'Ivan';
+// let admin = name;
 
-console.log('Значение переменной admin:', admin);
+// console.log('Значение переменной admin:', admin);
