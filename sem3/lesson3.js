@@ -53,3 +53,26 @@
 // let num = prompt('Введите любое число');
 // console.log(num);
 // printResult(checkNumber(num));
+
+
+// Задача 4. Сделайте функцию, которая параметрами принимает 3 числа и
+// выводит в консоль сумму этих чисел.
+
+// function sumNumber() {
+//     let num = Number(prompt('Введите число'));
+//     let sum = 0;
+//     while(num != 0) {
+//         sum += num;
+//         num = Number(prompt('Введите число'));
+//     }
+//     return sum;
+// }
+
+// function printResult(num) {
+//     console.log(`Сумма введенных чисел равна ${num}`);
+// }
+
+// printResult(sumNumber());
+
+
+//Задача 5. 
