@@ -92,16 +92,72 @@
 // Задача 6. Создайте функцию, которая находит минимальное число из 2х
 // передаваемых аргументов функции
 
-function isMin() {
-    let num = Number(prompt('Введите число'));
-    let min = num;
-    while (num != false) {
-        if (num < min) {
-            min = num;
-        }
-        num = Number(prompt('Введите число'));
-    }
-    return min;
-}
+// function isMin() {
+//     let num = Number(prompt('Введите число'));
+//     let min = num;
+//     while (num != false) {
+//         if (num < min) {
+//             min = num;
+//         }
+//         num = Number(prompt('Введите число'));
+//     }
+//     return min;
+// }
 
-console.log(`Минимальное из введенных ${isMin()}`);
+// console.log(`Минимальное из введенных ${isMin()}`);
+
+
+// Задача 7. Сделайте функцию, которая принимает параметром число от 1 до 7,
+// а возвращает день недели на русском языке.
+
+// function numberDayOfWeek() {
+//     let num = Number(prompt('Введите число от 1 до 7'));
+//     switch (num) {
+//         case 1:
+//             console.log('Понедельник');
+//             break;
+//         case 2:
+//             console.log('Вторник');
+//             break;
+//         case 3:
+//             console.log('Среда');
+//             break;
+//         case 4:
+//             console.log('Четверг');
+//             break;
+//         case 5:
+//             console.log('Пятница');
+//             break;
+//         case 6:
+//             console.log('Суббота');
+//             break;
+//         case 7:
+//             console.log('Воскресенье');
+//             break;
+//         default:
+//           console.log('День недели не задан');
+//       }
+// }
+
+// numberDayOfWeek();
+
+
+// Задача 8. Написать функцию, которой передаем имя и она возвращает
+// приветствие в зависимости от времени суток (Доброе
+// утро\день\вечер\ночи Иван)
+
+// function timeOfDay() {
+//     let currentDate = new Date();
+//     let time = new Date();
+//     if (time.setHours(6,0,0) < currentDate && time.setHours(11,30,0) > currentDate) {
+//         console.log('Доброе утро');
+//     } else if (time.setHours(11,31,0) < currentDate && time.setHours(17,0,0) > currentDate) {
+//         console.log('Добрый день');
+//     } else if (time.setHours(17,1,0) < currentDate && time.setHours(22,0,0) > currentDate) {
+//         console.log('Добрый вечер');
+//     } else {
+//         console.log('Доброй ночи');
+//     }
+// }
+
+// timeOfDay();
