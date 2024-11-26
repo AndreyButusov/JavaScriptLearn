@@ -112,28 +112,58 @@
 //     }
 //     Найдите сумму элементов приведенного объекта.
 
-const obj = {
-    key1: {
-        key1: 1,
-        key2: 2,
-        key3: 3,
-    },
-    key2: {
-        key1: 4,
-        key2: 5,
-        key3: 6,
-    },
-    key3: {
-        key1: 7,
-        key2: 8,
-        key3: 9,
-    },
-}
+// const obj = {
+//     key1: {
+//         key1: 1,
+//         key2: 2,
+//         key3: 3,
+//     },
+//     key2: {
+//         key1: 4,
+//         key2: 5,
+//         key3: 6,
+//     },
+//     key3: {
+//         key1: 7,
+//         key2: 8,
+//         key3: 9,
+//     },
+// }
 
-let sum = 0;
-for (const keyUp in obj) {
-    for (const value in obj[keyUp]) {
-    sum += obj[keyUp][value];
+// let sum = 0;
+// for (const keyUp in obj) {
+//     for (const value in obj[keyUp]) {
+//     sum += obj[keyUp][value];
+//     }
+// }
+// console.log(sum);
+
+
+// Задача 8.
+// Создайте объект riddles
+// Добавьте свойства question, answer
+// создайте метод askQuestion который спрашивает у пользователя
+// вопрос question и сравнивает ответ с answer
+// Если ответил неверно, то в консоль выводится текст: “вы проиграли”
+// * По желанию, создать 2 подсказки, если пользователь ответил неверно
+
+const riddles = {
+    question: 'Зимой и летом одним цветом',
+    answer: 'елка',
+    askQuestion() {
+        let word = prompt(this.question);
+        word = word.toLocaleLowerCase();
+        if (word === riddles.answer) {
+            alert('Вы угадали');
+        } else {
+            const word = prompt('Попробуйте еще раз! Зимой и летом одним цветом');
+            if (word === riddles.answer) {
+                alert('Вы угадали');
+            } else {
+                alert('Вы не угадали');
+            }
+        }
     }
 }
-console.log(sum);
+
+riddles.askQuestion();
