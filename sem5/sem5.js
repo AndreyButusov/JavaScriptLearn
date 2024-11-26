@@ -29,4 +29,18 @@
 // alert(`${user.surname}-${user.name}-${user.age}`);
 
 
+// Задача 3.
+// Добавьте в объект user свойство отчество, которое
+// пользователь должен ввести с клавиатуры
+
+// const user = {
+//     name: 'Ivan',
+//     surname: 'Ivanov',
+//     age: 18,
+// }
+
+// user.middleName = prompt('Введите отчество');
+// alert(`${user.surname}-${user.name}-${user.middleName}-${user.age}`);
+
+
 //
