@@ -17,3 +17,16 @@
 
 
 // Задача 2.
+// Создайте объект user с ключами 'name', 'surname', ‘age’.
+// Выведите на экран фамилию, имя и возраст через дефис.
+
+// const user = {
+//     name: 'Ivan',
+//     surname: 'Ivanov',
+//     age: 18,
+// }
+
+// alert(`${user.surname}-${user.name}-${user.age}`);
+
+
+//
