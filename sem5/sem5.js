@@ -43,4 +43,15 @@
 // alert(`${user.surname}-${user.name}-${user.middleName}-${user.age}`);
 
 
-//
+//Задача 4.
+// Удалите свойство surname
+
+// const user = {
+//     name: 'Ivan',
+//     surname: 'Ivanov',
+//     age: 18,
+// }
+
+// user.middleName = prompt('Введите отчество');
+// delete user.surname;
+// alert(`${user.name}-${user.middleName}-${user.age}`);
