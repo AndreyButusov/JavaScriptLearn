@@ -74,3 +74,19 @@
 // }
 
 // console.log(obj);
+
+
+// Задача 6.
+// const obj = {x: 1, y: 2, z: 3};
+// Переберите этот объект циклом и возведите каждый элемент
+// этого объекта в квадрат
+
+const obj = {
+    x: 1, 
+    y: 2, 
+    z: 3
+};
+
+for (const value in obj) {
+    console.log(obj[value] ** 2); 
+}
