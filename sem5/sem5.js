@@ -147,23 +147,23 @@
 // Если ответил неверно, то в консоль выводится текст: “вы проиграли”
 // * По желанию, создать 2 подсказки, если пользователь ответил неверно
 
-const riddles = {
-    question: 'Зимой и летом одним цветом',
-    answer: 'елка',
-    askQuestion() {
-        let word = prompt(this.question);
-        word = word.toLocaleLowerCase();
-        if (word === riddles.answer) {
-            alert('Вы угадали');
-        } else {
-            const word = prompt('Попробуйте еще раз! Зимой и летом одним цветом');
-            if (word === riddles.answer) {
-                alert('Вы угадали');
-            } else {
-                alert('Вы не угадали');
-            }
-        }
-    }
-}
+// const riddles = {
+//     question: 'Зимой и летом одним цветом',
+//     answer: 'елка',
+//     askQuestion() {
+//         let word = prompt(this.question);
+//         word = word.toLocaleLowerCase();
+//         if (word === riddles.answer) {
+//             alert('Вы угадали');
+//         } else {
+//             const word = prompt('Попробуйте еще раз! Зимой и летом одним цветом');
+//             if (word === riddles.answer) {
+//                 alert('Вы угадали');
+//             } else {
+//                 alert('Вы не угадали');
+//             }
+//         }
+//     }
+// }
 
-riddles.askQuestion();
+// riddles.askQuestion();
