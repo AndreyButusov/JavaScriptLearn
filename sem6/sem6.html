@@ -44,10 +44,11 @@
         divEl.appendChild(newP);
         newP.textContent = 'Новый текстовый элемент';
         const newButton = document.createElement('button');
-        newButton.textContent = "Жми сюда!";
+        newButton.textContent = "Отправить";
+        divEl.removeChild(newP);
         newButton.onclick = function() {
             counter++;
-            newP.textContent = counter;
+            newButton.textContent = `Текст отправлен ${counter} раз`;
         }
         divEl.appendChild(newButton);
         console.log(divEl);
