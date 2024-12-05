@@ -17,7 +17,11 @@
 
     <!-- Задание 2 -->
     <!-- <a href="#" class="link">link text html</a> -->
-     <img src="" alt="test" class="photo">
+     <!-- <img src="" alt="test" class="photo"> -->
+
+
+    <!-- Задание 3 -->
+    <div class="content"></div>
     <script>
         // Задание 1
         // const src = document.querySelector('#block p:first-child');
@@ -30,8 +34,16 @@
         // console.log(link1);
         // link1.innerHTML = 'link text js';
         // link1.href = 'https://vk.com';
-        const imgEl = document.querySelector('.photo');
-        imgEl.src = 'https://vestivrn.ru/i/c2/c2c54dcc9e211dc3d1212572c1cab790.jpg';
+        // const imgEl = document.querySelector('.photo');
+        // imgEl.src = 'https://vestivrn.ru/i/c2/c2c54dcc9e211dc3d1212572c1cab790.jpg';
+
+        // Задание 3
+        const divEl = document.querySelector('.content');
+        const newP = document.createElement('p');
+        divEl.appendChild(newP);
+        newP.textContent = 'Новый текстовый элемент';
+        console.log(divEl);
+        divEl.removeChild(newP);
     </script>
 </body>
 </html>
