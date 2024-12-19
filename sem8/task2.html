@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">Кнопка 1</button>
+    <button class="button">Кнопка 2</button>
+    <button class="button">Кнопка 3</button>
+    <button class="button2">Кнопка 4</button>
+    <button class="button3">Кнопка 5</button>
+    <script>
+        // Задание 2
+        // Создать в html три кнопки button с нумерацией (1, 2, 3 соответственно)
+        // 2.Добавить клик на кнопку , чтобы в консоль выводилась именно та кнопка на которую мы нажали
+        // 3.Добавить кнопку button с текстом 4, которая считает сколько раз на нее нажали и 
+        // количество нажатий на эту кнопку выводит в консоль
+        // 4.Создать кнопку button с текстом 5, При клике на которую, меняется текст 
+        // данной кнопки на “Вы нажали на эту кнопку”
+
+        const buttonEl = document.querySelectorAll('.button');
+        
+        buttonEl.forEach(element => {
+            element.addEventListener('click', function (e) {
+                const target = e.target;
+                console.log(target);
+            })
+        });
+        
+        const but4El = document.querySelector('.button2');
+        let counterForButton4 = 0;
+        function handleClick() { console.log(++counterForButton4); }
+        but4El.addEventListener('click', handleClick);
+
+        const but5El = document.querySelector('.button3');
+        but5El.addEventListener('click', function(e) {
+            but5El.textContent = 'Вы нажали на эту кнопку';
+        });
+
+    </script>
+</body>
+</html>
