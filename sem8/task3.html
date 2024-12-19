@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button1">Добавить заголовок</button>
+    <button class="button2">Удалить заголовок</button>
+    <button class="button3">Кнопка 3</button>
+
+    <script>
+        // 1.Создать кнопку, которая добавляем заголовок h1 с текстом, “Новый заголовок, 
+        // данный элемент нужно расположить после кнопки
+        // 2.Создать вторую кнопку, которая будет удалять созданный заголовок h1
+        // 3.Создать третью кнопку, при наведении на которую в консоль будет выводиться текст 
+        // “вы навели на данную кнопку” , как только вы убираем курсор мыши с кнопки, в консоли 
+        // должен появиться текст “Наведения на кнопку больше нет”
+
+        const buttonEl1 = document.querySelector('.button1');
+        const buttonEl2 = document.querySelector('.button2');
+        const buttonEl3 = document.querySelector('.button3');
+
+        const newEl = document.createElement('h1');
+        newEl.textContent = 'Новый заголовок';
+
+        buttonEl1.addEventListener('click', function (e) {
+            buttonEl1.parentElement.appendChild(newEl);
+        });
+
+
+        buttonEl2.addEventListener('click', function (e) {
+            buttonEl2.parentElement.removeChild(newEl);
+        });
+        
+        buttonEl3.addEventListener('mouseover', function(e) {
+            console.log('вы навели на данную кнопку');
+        })
+        buttonEl3.addEventListener('mouseout', function(e) {
+           console.log('Наведения на кнопку больше нет')
+        });
+
+
+    </script>
+</body>
+</html>
