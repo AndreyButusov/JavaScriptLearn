@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+    <div class="drinks">
+        <h2>Что будем пить?</h2>
+        <input type="radio" class="drinkTea" name="Tea" id="drinksT">
+        <label for="drinkTea">Чай</label>
+        <input type="radio" class="drinkCoffee" name="Coffee" id="drinksC">
+        <label for="drinkCoffee">Кофе</label>
+        <br>
+        <button class="button">Отправить!</button>
+
+    </div>
+    
+
+    <script>
+        //1.В html создать 2 элемента радио кнопки (input type=”radio”) и текст “Чай”, “Кофе” соответственно
+        // 2.Кнопка отправить
+        // 3.Если выбран чай, необходимо вывести сообщение “Чай закончился”
+        // 4.Если выбран кофе, необходимо вывести соообщение “кофе закончился”
+
+        const drinks = document.querySelector('.drinks');
+        const buttonEl = drinks.querySelector('.button');
+        const drinksTea = drinks.querySelector('.drinkTea');
+        const drinksCoffee = drinks.querySelector('.drinkCoffee');
+
+        drinksTea.addEventListener('click', function (e) {
+            drinksCoffee.checked = false;
+        })
+
+        drinksCoffee.addEventListener('click', function (e) {
+            drinksTea.checked = false;
+        })
+        
+        buttonEl.addEventListener('click', function(e) {
+            if (drinksTea.checked) {
+                
+                console.log('чай закончился');
+            } else {
+                if (drinksCoffee.checked) {
+                    console.log('кофе закончился');
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
