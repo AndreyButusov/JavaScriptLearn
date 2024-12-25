@@ -8,9 +8,9 @@
 <body>
     <div class="drinks">
         <h2>Что будем пить?</h2>
-        <input type="radio" class="drinkTea" name="Tea" id="drinksT">
+        <input type="radio" class="drinkTea" name="drinks" id="drinksT">
         <label for="drinkTea">Чай</label>
-        <input type="radio" class="drinkCoffee" name="Coffee" id="drinksC">
+        <input type="radio" class="drinkCoffee" name="drinks" id="drinksC">
         <label for="drinkCoffee">Кофе</label>
         <br>
         <button class="button">Отправить!</button>
@@ -28,14 +28,6 @@
         const buttonEl = drinks.querySelector('.button');
         const drinksTea = drinks.querySelector('.drinkTea');
         const drinksCoffee = drinks.querySelector('.drinkCoffee');
-
-        drinksTea.addEventListener('click', function (e) {
-            drinksCoffee.checked = false;
-        })
-
-        drinksCoffee.addEventListener('click', function (e) {
-            drinksTea.checked = false;
-        })
         
         buttonEl.addEventListener('click', function(e) {
             if (drinksTea.checked) {
