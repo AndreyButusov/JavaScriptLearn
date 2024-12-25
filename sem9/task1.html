@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+</head>
+<body>
+    <div class="agree">
+        <input type="checkbox" class="check" id="check"> 
+        <label for="check">Согласен с условиями</label>
+        <br>
+          
+    </div>
+    <button class="button">Отправить</button>
+    <script>
+        // 1.В html создать элемент checkbox и текст рядом с ним “Согласен с условиями”
+        // 2.Добавить кнопку отправить
+        // 3.При клике на кнопку отправить нужно проверять выбран ли активным элемент checkbox
+        // 4.Если элемент не выбран, добавить текст под чекбоксом “Необходимо согласиться с условиями”
+
+
+        const boxAgree = document.querySelector('.agree');
+        const clickButton = document.querySelector('.button');
+        const checkboxExample = boxAgree.querySelector('.check');
+        const newText = document.createElement('p');
+        newText.textContent = 'Необходимо согласиться с условиями';
+
+        clickButton.addEventListener('click', function(e) {
+            
+            if (checkboxExample.checked) {
+                    boxAgree.removeChild(newText);                
+                } else {
+                    boxAgree.appendChild(newText);
+                }   
+        });
+        
+    </script>
+</body>
+</html>
