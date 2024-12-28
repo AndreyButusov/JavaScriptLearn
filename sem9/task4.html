@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+<body>
+    <input type="text" class="intext" name=" " id="text">
+    <h1 class="header">Заголовок</h1>
+
+    <script>
+        const inputEl = document.querySelector('.intext');
+        let h1El = document.querySelector('.header');
+
+        inputEl.addEventListener('input', function(e) {
+            if (!inputEl.value) {
+                h1El.textContent = 'Заголовок';
+            } else {
+                h1El.textContent = inputEl.value;
+            }
+        });
+    </script>
+</body>
+</html>

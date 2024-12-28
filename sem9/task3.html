@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3</title>
+</head>
+<body>
+    <input type="password" class="password" name="password" id="password" maxlength="6">
+    <button class="button">Отправить</button>
+
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const inputPass = document.querySelector('.password');
+
+        console.log(buttonEl);
+        console.log(inputPass);
+
+        inputPass.addEventListener('input', function(e) {
+            if (inputPass.value === 'пароль') {
+                inputPass.style.backgroundColor = 'green';
+            } else {
+                inputPass.style.border = '1px solid red';
+            }
+        });
+    </script>
+</body>
+</html>

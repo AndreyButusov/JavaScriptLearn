@@ -8,9 +8,9 @@
 <body>
     <div class="drinks">
         <h2>Что будем пить?</h2>
-        <input type="radio" class="drinkTea" name="drinks" id="drinksT">
+        <input type="radio" class="radio" name="drinks" id="drinksT">
         <label for="drinkTea">Чай</label>
-        <input type="radio" class="drinkCoffee" name="drinks" id="drinksC">
+        <input type="radio" class="radio" name="drinks" id="drinksC">
         <label for="drinkCoffee">Кофе</label>
 
     </div>
@@ -24,21 +24,17 @@
 
         const drinks = document.querySelector('.drinks');
         const buttonEl = document.querySelector('.button');
-        const drinksTea = drinks.querySelector('.drinkTea');
-        const drinksCoffee = drinks.querySelector('.drinkCoffee');
+        const radioButtons = document.querySelectorAll('.radio');
         const h2El = document.createElement('h2');
         
-        buttonEl.addEventListener('click', function(e) {
-            if (drinksTea.checked) {
-                h2El.textContent = 'чай закончился';
-                drinks.appendChild(h2El);
-            } else {
-                if (drinksCoffee.checked) {
-                    h2El.textContent = 'кофе закончился';
+        radioButtons.forEach(element => {
+            element.addEventListener('change', function (e) {
+                if (element.checked) {
+                    h2El.textContent = `${element.nextElementSibling.textContent} закончился`;
                     drinks.appendChild(h2El);
                 }
-            }
-        });
+            })
+        })
 
 
     </script>
