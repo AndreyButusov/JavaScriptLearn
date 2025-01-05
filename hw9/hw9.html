@@ -65,7 +65,7 @@
         </label>
         <br>
         <br>
-        <button type="submit">Отправить</button>
+        <button class="formButton" type="submit">Отправить</button>
     </form>
 
     <script>
@@ -84,29 +84,52 @@
         // ■ Если поле пустое, подсветите его (добавьте класс error).
         // ■ Если поле заполнено, уберите подсветку (удалите класс error).
 
-        const inputEl = document.getElementById('from');
-        const spanEl = document.querySelector('span');
-        console.log(inputEl);
-        console.log(spanEl);
+        // const inputEl = document.getElementById('from');
+        // const spanEl = document.querySelector('span');
 
-        inputEl.addEventListener('input', () => {
-            spanEl.textContent = inputEl.value;
+        // inputEl.addEventListener('input', () => {
+        //     spanEl.textContent = inputEl.value;
+        // })
+
+
+        // const butEl = document.querySelector('.messageBtn');
+        // const createEl = document.querySelector('.message');
+
+        // butEl.addEventListener('click', function () {
+        //     createEl.classList.add('animate_animated', 'animate_fadeInLeftBig');
+        //     console.log(createEl);
+        //     createEl.style.visibility = 'visible';
+        // })
+
+
+        const formControl = document.querySelectorAll('.form-control');
+        const form = document.querySelector('form');
+        const butEl = document.querySelector('.formButton');
+
+
+        form.addEventListener('submit', (event) => {
+            let isValid = true;
+            formControl.forEach(element => {
+                if (!element.value) {
+                    element.classList.add('error');
+                    isValid = false;
+                }
+            });
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+
+        form.addEventListener('input', function () {
+            formControl.forEach(element => {
+                if (!element.value) {
+                    element.classList.add('error');
+                } else {
+                    element.classList.remove('error');
+                }
+            })
         })
 
-
-        const butEl = document.querySelector('.messageBtn');
-        console.log(butEl);
-        const createEl = document.querySelector('.message');
-        console.log(createEl);
-
-        butEl.addEventListener('click', function () {
-            createEl.classList.add('animate_animated', 'animate_fadeInLeftBig');
-            console.log(createEl);
-            createEl.style.visibility = 'visible';
-        })
-
-
-        
     
     </script>
 </body>
