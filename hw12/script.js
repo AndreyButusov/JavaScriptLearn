@@ -40,7 +40,7 @@ async function addToCart(productId) {
     const product = data.find(item => item.id === productId);
     if (product) {
         cartList.insertAdjacentHTML('beforeend', `
-            <li class="cartlist__item">
+            <li class="cartlist__item" data-price="${product.price}">
 
                 <img src="${product.img}" alt="${product.title}" width="100" height="100">
                 <button class="delete">
@@ -57,7 +57,6 @@ async function addToCart(productId) {
         totalPrice += Number(product.price);
         totalPriceEl.textContent = `Total: ${totalPrice} $`;
     }
-    
 }
 
 cartList.addEventListener('click', (e) => {
@@ -65,8 +64,8 @@ cartList.addEventListener('click', (e) => {
         const item = e.target.closest('.cartlist__item');
         if (item) {
             item.remove();
-            // totalPrice -= Number(product.price);
-            // totalPriceEl.textContent = `Total: ${totalPrice} $`;
+            totalPrice -= Number(item.getAttribute('data-price'), 10);
+            totalPriceEl.textContent = `Total: ${totalPrice} $`;
         }
     }
 })
